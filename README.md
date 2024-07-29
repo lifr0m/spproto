@@ -20,7 +20,7 @@ signed and verified with pre-obtained Ed25519 public keys.
 
 ```python
 from pathlib import Path
-from spp.key import generate_private_key, get_public_key
+from spproto.key import generate_private_key, get_public_key
 
 def main() -> None:
     privkey_path = Path('~/Desktop/privkey').expanduser()
@@ -44,7 +44,7 @@ Connect to your friend
 ```python
 import asyncio
 from pathlib import Path
-from spp.client import connect
+from spproto.client import connect
 
 async def main() -> None:
     privkey = Path('~/Desktop/privkey').expanduser().read_bytes()
@@ -66,8 +66,8 @@ Make your friend available to connect to you.
 ```python
 import asyncio
 from pathlib import Path
-from spp.connection import Connection
-from spp.server import serve
+from spproto.connection import Connection
+from spproto.server import serve
 
 async def callback(
     conn: Connection
