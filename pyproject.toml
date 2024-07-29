@@ -28,7 +28,7 @@ dependencies = [
 dynamic = ["version"]
 
 [project.urls]
-homepage = "https://github.com/lifr0m/spp"
+Homepage = "https://github.com/lifr0m/spproto"
 
 [project.optional-dependencies]
 dev = [
