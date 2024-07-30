@@ -10,7 +10,7 @@ Intended to work as 5th OSI layer usually on top of TCP/IP.
 
 1. shared key is obtained using ECDHE. Transferred DH public keys are
 signed and verified with pre-obtained Ed25519 public keys.
-2. auth key is derived from shared key using HKDF.
+2. auth key is derived from shared key using ConcatKDFHash.
 3. Message using ChaCha20-Poly1305 with auth key.
 
 ## Preparation before using

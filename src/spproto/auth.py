@@ -7,7 +7,7 @@ from cryptography.hazmat.primitives.asymmetric.x25519 import (
     X25519PrivateKey,
     X25519PublicKey
 )
-from cryptography.hazmat.primitives.kdf.hkdf import HKDF
+from cryptography.hazmat.primitives.kdf.concatkdf import ConcatKDFHash
 
 from .connection import Connection
 from .protocol.message import MessageProtocol
@@ -55,7 +55,7 @@ async def _exchange_auth_key(
 
     shared_key = dh_privkey.exchange(peer_dh_pubkey)
 
-    kdf = HKDF(hashes.SHA3_256(), 32, None, None)
+    kdf = ConcatKDFHash(hashes.SHA256(), 32, None)
     auth_key = kdf.derive(shared_key)
 
     return auth_key
