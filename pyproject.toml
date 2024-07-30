@@ -12,7 +12,7 @@ authors = [
 ]
 keywords = [
     "chat", "message", "peer", "protocol", "secure", "cryptography", "ec",
-    "eddsa", "ecdsa", "ed25519", "dh", "ecdh", "ecdhe", "kdf", "hkdf",
+    "eddsa", "ecdsa", "ed25519", "dh", "ecdh", "ecdhe", "kdf", "concatkdf",
     "chacha20", "poly1305", "chacha20-poly1305"
 ]
 classifiers = [
