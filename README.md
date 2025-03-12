@@ -6,6 +6,8 @@ Chat with friends in a truly cryptographically secure way.
 
 Intended to work as 5th OSI layer usually on top of TCP/IP.
 
+[Rust version](https://github.com/lifr0m/spproto-rs)
+
 ### Mechanism
 
 1. shared key is obtained using ECDHE. Transferred DH public keys are
